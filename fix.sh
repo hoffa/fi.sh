@@ -10,7 +10,7 @@ delete () {
 echo "Available devices:"
 for addr in `PlistBuddy -c "Print :DeviceCache" $plist | grep -ao "..-..-..-..-..-.."`
 do
-    echo "$addr: `PlistBuddy -c "Print :DeviceCache:$addr:Name" $plist`"
+    echo "$addr: `PlistBuddy -c \"Print :DeviceCache:$addr:Name\" $plist`"
 done
 read -p "Address: " addr
 
