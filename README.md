@@ -3,7 +3,7 @@ BluePadFix
 
 BluePadFix (terrific name, I admit) is a tiny tool that enables the use of third-party Bluetooth PS3 controllers on OS X by pretending to be a genuine PS3 controller. Tested on OS X Mavericks.
 
-Credit goes to MrRocketman, Robert Louis Murphy and Clobber for figuring out how to make it all work.
+Credit goes to [MrRocketman](https://github.com/MrRocketman), [clobber](https://github.com/clobber) and [Robert Louis Murphy](http://apple.stackexchange.com/questions/75889/anyone-able-to-connect-gioteck-vx-1-ps3-controller-via-bluetooth) for figuring out how to make it all work.
 
 ##Steps
 1. Open Bluetooth settings from System Preferences and turn on Bluetooth. ![](http://i.imgur.com/IJrpdui.png)
