@@ -33,6 +33,6 @@ delete VendorID
 
 PlistBuddy -c "Merge $ps3_controller_plist :DeviceCache:$addr" $bluetooth_plist
 
-defaults read /Library/Preferences/com.apple.Bluetooth.plist &> /dev/null
+defaults read $bluetooth_plist &> /dev/null
 
 echo "Done."
