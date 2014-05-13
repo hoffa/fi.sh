@@ -14,4 +14,4 @@ BluePadFix (terrific name, I admit) is a tiny tool that enables the use of third
 8. Press the middle button on your controller and wait for it to connect once again. This time everything should work smooth like butter.
 9. Profit!
 
-By the way, on my controller no lights are lit when it's working properly, just so you know.
+By the way, on my controller no lights are lit when it's working properly, just so you know. Oh and you only need to do those steps once. Once it's working, it's working.
