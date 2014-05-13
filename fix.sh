@@ -1,22 +1,20 @@
 #!/bin/sh
 
 alias PlistBuddy=/usr/libexec/PlistBuddy
-bluetooth_plist=/Library/Preferences/com.apple.Bluetooth.plist
-ps3_controller_plist=Controller.plist
+plist=/Library/Preferences/com.apple.Bluetooth.plist
 
 delete () {
-    PlistBuddy -c "Delete :DeviceCache:$addr:$1" $bluetooth_plist &> /dev/null
+    PlistBuddy -c "Delete :DeviceCache:$addr:$1" $plist &> /dev/null
 }
 
 echo "Available devices:"
-for addr in `PlistBuddy -c "Print :DeviceCache" $bluetooth_plist | grep -ao "..-..-..-..-..-.."`
+for addr in `PlistBuddy -c "Print :DeviceCache" $plist | grep -ao "..-..-..-..-..-.."`
 do
-    echo "$addr: `PlistBuddy -c "Print :DeviceCache:$addr:Name" $bluetooth_plist`"
+    echo "$addr: `PlistBuddy -c "Print :DeviceCache:$addr:Name" $plist`"
 done
-
 read -p "Address: " addr
 
-cp $bluetooth_plist $bluetooth_plist.backup
+cp $plist $plist.backup
 
 delete ClassOfDevice
 delete ClockOffset
@@ -31,8 +29,8 @@ delete Services
 delete SupportedFeatures
 delete VendorID
 
-PlistBuddy -c "Merge $ps3_controller_plist :DeviceCache:$addr" $bluetooth_plist
+PlistBuddy -c "Merge Controller.plist :DeviceCache:$addr" $plist
 
-defaults read $bluetooth_plist &> /dev/null
+defaults read $plist &> /dev/null
 
 echo "Done."
