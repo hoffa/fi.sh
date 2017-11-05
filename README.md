@@ -15,5 +15,6 @@ Credit goes to [MrRocketman](https://github.com/MrRocketman), [clobber](https://
 7. If your controller is still blinking like crazy just wait for it to stop. Once it's over, turn on Bluetooth.
 8. Press the middle button on your controller and wait for it to connect once again. This time everything should work smooth like butter.
 9. Profit!
+10. If OpenEmu still don't see the wireless controller, reboot. After reboot it will work wirelessly.
 
 By the way, on my controller no lights are lit when it's working properly, just so you know. Oh and you only need to do those steps once. Once it's working, it's working.
